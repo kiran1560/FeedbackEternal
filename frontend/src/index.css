@@ -1,0 +1,252 @@
+/* Global body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f0ff; /* light blue background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Card-like form container */
+form {
+  background-color: #ffffff; /* white card */
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d1d9e6;
+  box-sizing: border-box; /* include padding/border in width */
+}
+
+/* Form headings */
+form h2 {
+  color: #1a3d7c; /* deep blue */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Labels */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1a3d7c; /* deep blue */
+}
+
+/* Inputs, selects, textarea */
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border: 1px solid #1a3d7c; /* blue border */
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* prevents overflow */
+}
+
+/* Focus state */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #3461a6; /* darker blue on focus */
+  outline: none;
+}
+
+/* Radio buttons container */
+form .flex {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+/* Radio button styling */
+form input[type="radio"] {
+  accent-color: #1a3d7c; /* blue for selected */
+}
+
+/* Submit button */
+form button {
+  background-color: #1a3d7c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #3461a6;
+}
+
+/* Feedback message */
+form p {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+form p.success {
+  color: green;
+}
+
+form p.error {
+  color: red;
+}
+
+/* Make textarea behave properly */
+form textarea {
+  resize: vertical; /* only vertical resize allowed */
+  min-height: 80px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  form {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+
+/* ----------------------------- */
+/* Feedback list container */
+.feedback-list {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+/* Feedback item card */
+.feedback-item {
+  background-color: #ffffff; /* white card */
+  border: 1px solid #d1d9e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.feedback-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Feedback item heading */
+.feedback-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a3d7c;
+  margin-bottom: 8px;
+}
+
+/* Feedback item details */
+.feedback-item p {
+  font-size: 14px;
+  margin: 3px 0;
+  color: #333333;
+}
+
+/* Feedback rating stars */
+.feedback-item p strong {
+  color: #1a3d7c; /* blue for labels */
+}
+
+/* Submission date */
+.feedback-item small {
+  display: block;
+  color: #777777;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* No feedback message */
+.feedback-list p {
+  text-align: center;
+  font-size: 16px;
+  color: #1a3d7c;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+
+/* Dropdown / select styling */
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 0px;
+  border: 1px solid #1a3d7c; /* deep blue */
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none; /* remove default arrow style */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231a3d7c' viewBox='0 0 16 16'><path d='M1.5 5l6 6 6-6H1.5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  box-sizing: border-box;
+}
+
+form select:hover,
+form select:focus {
+  border-color: #3461a6; /* darker blue on hover/focus */
+  box-shadow: 0 0 0 2px rgba(52, 97, 166, 0.2);
+  outline: none;
+}
+
+
+/* Rating group container */
+.rating-group {
+  display: flex;
+  justify-content: space-between; /* evenly space numbers */
+  max-width: 300px;
+  margin: 0 auto 15px auto; /* center and spacing */
+}
+
+/* Each radio label */
+.rating-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1a3d7c;
+  transition: transform 0.2s;
+}
+
+/* Hover effect */
+.rating-label:hover {
+  transform: translateY(-2px);
+}
+
+/* Radio buttons styling */
+.rating-label input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #1a3d7c; /* blue when selected */
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Number below the radio circle */
+.rating-label span {
+  font-size: 14px;
+  color: #1a3d7c;
+}
+
+
+.feed {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a3d7c;
+  margin-bottom: 30px;
+}

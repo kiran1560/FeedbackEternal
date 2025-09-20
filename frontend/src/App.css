@@ -1,0 +1,68 @@
+/* App background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f0ff; /* light blue background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  background-color: #1a3d7c; /* deep blue */
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+nav a:hover {
+  color: #cce0ff;
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+  min-height: calc(100vh - 64px); /* subtract navbar height */
+}
+
+/* Links container in navbar */
+nav .space-x-4 {
+  display: flex;
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav .space-x-4 {
+    margin-top: 8px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  nav h1 {
+    font-size: 18px;
+  }
+}
